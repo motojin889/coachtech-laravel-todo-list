@@ -24,13 +24,13 @@
         <th>削除</th>
       </tr>
       @foreach($items as $item )
-      <form action="/todo/update" method="post">
+      <form action="/todo/form" method="post">
         @csrf
         <tr>
           <td>{{$item->created_at}}</td>
-          <td><input type="text" name="content" placeholder="{{$item->content}}"><input type="hidden" name="id" value="{{$item->id}}"></td>
-          <td><input type="submit" value="更新"></td>
-          <td></td>
+          <td><input type="text" name="content" value="{{$item->content}}"><input type="hidden" name="id" value="{{$item->id}}"></td>
+          <td><input type="submit" name="update" value="更新"></td>
+          <td><input type="submit" name="delete" value="削除"></td>
         </tr>
       </form>
       @endforeach
