@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Todo;
 use Symfony\Component\Console\Input\Input;
+use App\Http\Requests\Todorequest;
 
 class Todocontroller extends Controller
 {
@@ -15,13 +16,13 @@ class Todocontroller extends Controller
         return view('app',['items' => $items]);
     }
 
-    public function create(Request $request){
+    public function create(TodoRequest $request){
         $posts = ['content' => $request->content,];
         Todo::insert($posts);
         return redirect('/');
     }
 
-    public function update(Request $request){
+    public function update(TodoRequest $request){
         $param = [
             'id' => $request->id,
             'content' =>$request->content,
@@ -33,7 +34,7 @@ class Todocontroller extends Controller
         $param = ['id' => $request -> id];
         Todo::where('id',$request->id)->delete();
     }
-    public function branch(Request $request){
+    public function branch(TodoRequest $request){
         if(!empty($_POST['update'])){
             $this->update($request);
             return redirect('/');
