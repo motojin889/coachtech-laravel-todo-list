@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COACHTECH</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 
 <body>
@@ -46,83 +46,6 @@
       </form>
       @endforeach
     </table>
-    <style>
-      body {
-        background-color: darkblue;
-        width: 100vw;
-      }
-
-      .title {
-        font-size: 25px;
-        padding: 30px 0 0 15px;
-      }
-
-      main {
-        width: 55%;
-        height: auto;
-        margin: 100px auto 0;
-        background-color: white;
-        border-radius: 20px;
-      }
-
-      .text-form {
-        width: 70%;
-        margin: 10px 30px 10px;
-        line-height: 30px;
-        border-radius: 5px;
-        border: gray solid 1px;
-      }
-
-      .table {
-        width: 85%;
-        margin: 0 auto;
-      }
-
-      .contents-list {
-        line-height: 40px;
-      }
-
-      .contents {
-        width: 90%;
-        height: 25px;
-        line-height: 20px;
-        border-radius: 5px;
-        border: 1px solid gray;
-        margin: 0 auto;
-      }
-
-      .update-submit {
-        color: orange;
-        border: orange 2px solid;
-        border-radius: 8px;
-        background-color: white;
-        height: 35px;
-        width: 4em;
-        cursor: pointer;
-      }
-
-      .update-submit:hover {
-        background-color: orange;
-        color: white;
-        transition: 0.3s;
-      }
-
-      .delete-submit {
-        color: lightblue;
-        border: lightblue 2px solid;
-        border-radius: 8px;
-        background-color: white;
-        height: 35px;
-        width: 4em;
-        cursor: pointer;
-      }
-
-      .delete-submit:hover {
-        background-color: lightblue;
-        color: white;
-        transition: 0.3s;
-      }
-    </style>
   </main>
 
 </body>
